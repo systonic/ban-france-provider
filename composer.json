@@ -1,0 +1,26 @@
+{
+    "name": "systonic/ban-france-provider",
+    "type": "library",
+    "description": "Geocoder Base Addresse Nationale France adapter",
+    "keywords": ["geocoding", "reverse"],
+    "homepage": "https://github.com/systonic/ban-france-provider",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sylvain Larras"
+        }
+    ],
+    "require": {
+        "php": "^8",
+        "geocoder-php/common-http": "^4",
+        "willdurand/geocoder": "^4"
+    },
+    "provide": {
+        "geocoder-php/provider-implementation": "1.0"
+    },
+    "autoload": {
+        "psr-4": { "Geocoder\\Provider\\BANFrance\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
