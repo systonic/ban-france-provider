@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace Geocoder\Provider\BANFrance;
 
 use Geocoder\Collection;
+use Geocoder\Exception\InvalidArgument;
 use Geocoder\Exception\UnsupportedOperation;
 use Geocoder\Model\Address;
 use Geocoder\Model\AddressCollection;
@@ -20,7 +21,7 @@ use Geocoder\Query\GeocodeQuery;
 use Geocoder\Query\ReverseQuery;
 use Geocoder\Http\Provider\AbstractHttpProvider;
 use Geocoder\Provider\Provider;
-use Http\Client\HttpClient;
+use Psr\Http\Client\ClientInterface;
 
 /**
  * @author Sébastien Barré <sebastien@sheub.eu>
@@ -38,9 +39,9 @@ final class BANFrance extends AbstractHttpProvider implements Provider
     const REVERSE_ENDPOINT_URL = 'https://api-adresse.data.gouv.fr/reverse/?&lon=%F&lat=%F';
 
     /**
-     * @param HttpClient $adapter An HTTP adapter.
+     * @param ClientInterface $adapter An HTTP adapter.
      */
-    public function __construct(HttpClient $client)
+    public function __construct(ClientInterface $client)
     {
         parent::__construct($client);
     }

@@ -11,9 +11,9 @@
         }
     ],
     "require": {
-        "php": "^8",
-        "geocoder-php/common-http": "^4",
-        "willdurand/geocoder": "^4"
+        "php": "^7.4 || ^8.0",
+        "geocoder-php/common-http": "^4.0",
+        "willdurand/geocoder": "^4.0"
     },
     "provide": {
         "geocoder-php/provider-implementation": "1.0"
