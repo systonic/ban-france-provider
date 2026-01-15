@@ -82,7 +82,7 @@ final class BANFrance extends AbstractHttpProvider implements Provider
      *
      * @return \Geocoder\Collection
      */
-    private function executeQuery(string $url, int $limit = null): Collection
+    private function executeQuery(string $url, ?int $limit = null): Collection
     {
         $content = $this->getUrlContents($url);
         $json = json_decode($content, true);
