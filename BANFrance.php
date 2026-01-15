@@ -31,12 +31,12 @@ final class BANFrance extends AbstractHttpProvider implements Provider
     /**
      * @var string
      */
-    const GEOCODE_ENDPOINT_URL = 'https://api-adresse.data.gouv.fr/search/?q=%s&limit=%d';
+    const GEOCODE_ENDPOINT_URL = 'https://data.geopf.fr/geocodage/search/?q=%s&limit=%d';
 
     /**
      * @var string
      */
-    const REVERSE_ENDPOINT_URL = 'https://api-adresse.data.gouv.fr/reverse/?&lon=%F&lat=%F';
+    const REVERSE_ENDPOINT_URL = 'https://data.geopf.fr/geocodage/reverse/?&lon=%F&lat=%F';
 
     /**
      * @param ClientInterface $adapter An HTTP adapter.
